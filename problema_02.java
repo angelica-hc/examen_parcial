@@ -18,14 +18,19 @@ public class problema_02 {
                 res[1]=der[0];
             }
         }else{
-            
+            res[0]=der[0];
+            if (izq[0]>der[1]){
+                res[1]=izq[0];
+            }else{
+                res[1]=der[1];
+            }
         }
-
+        return res;
     }
     public static void main (String[]as){
-        int [ ]salida={8,3,10,5,7};
-        int r=nmayor(salida,0, salida.length-1);
-        System.out.println("numero mayor es: "+r[1]);
+        int[ ]salida={8,3,10,5,7};
+        int[] r= nmayor(salida, 0, salida.length-1);
+        System.out.println("2do numero mayor es:" +r[1]);
 
     }
 }
